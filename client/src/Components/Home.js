@@ -9,11 +9,11 @@ class Home extends React.Component {
 	}
 	
 	componentWillMount() {
-		fetch('http://localhost:4000/test')
+		fetch('/flower')
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
-				this.setState({test: data})
+				this.setState({test: data.name})
 			})
 	}
 	render() {

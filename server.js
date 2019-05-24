@@ -17,7 +17,7 @@ const path = require('path');
 // });
 
 
-
+const PORT = process.env.HTTP_PORT || 4001;
 
 const app = express();
 
@@ -27,10 +27,16 @@ app.use(cors());
 
 
 app.get('/test', (req, res) => {
-	res.json('hellloooooo');
+	res.json('just gonna send it');
 })
 
+app.get('/flower', (req, res) => {
+	res.json({
+		name: 'Dandelion',
+		colour: 'Blue-ish'
+	});
+})
 
-app.listen(4000, ()=> {
-	console.log('app is running on port 4000');
+app.listen(PORT, ()=> {
+	console.log('app is running on port 4001');
 })
