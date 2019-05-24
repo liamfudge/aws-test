@@ -9,7 +9,7 @@ class Home extends React.Component {
 	}
 	
 	componentWillMount() {
-		fetch('http://localhost:3000/test')
+		fetch('http://localhost:4000/test')
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
