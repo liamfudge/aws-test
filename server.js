@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const csv = require('fast-csv');
 const cors = require('cors');
-const bcrypt = require('bcrypt-nodejs');
-const knex = require('knex');
+// const bcrypt = require('bcrypt-nodejs');
+// const knex = require('knex');
 const path = require('path');
 
 // const db = knex({
@@ -22,7 +22,7 @@ const PORT = process.env.HTTP_PORT || 4001;
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.use(cors());
 
 
